@@ -2,4 +2,4 @@ function ExpenseItem(){
     return (<h2>Expense Item</h2>);
 }
 
-export default ExponseItem;
+export default ExpenseItem;
