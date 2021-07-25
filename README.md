@@ -1,6 +1,6 @@
 # About
 
-I am learning react by building a expense calculator
+I am learning react by building an expense calculator
 
 # Getting Started with Create React App
 
