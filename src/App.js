@@ -2,7 +2,12 @@ import ExpenseItem from "./components/ExpenseItem";
 
 function App() {
   const expenses = [
-    { id: "e1", title: "New TV", amount: 499.99, date: new Date(2021, 1, 5) },
+    {
+      id: "e1",
+      title: "New TV",
+      amount: 799.99,
+      date: new Date(2021, 1, 14),
+    },
     {
       id: "e2",
       title: "Car Insurance",
