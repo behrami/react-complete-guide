@@ -2,38 +2,42 @@ import "./ExpenseForm.css";
 import React, { useState } from "react";
 
 const ExpenseForm = () => {
-  // const [enteredTitle, setEnteredTitle] = useState("");
-  // const [enteredAmount, setEnteredAmount] = useState("");
-  // const [enteredDate, setEnteredDate] = useState(""); OR you can use single state still
+  const [enteredTitle, setEnteredTitle] = useState("");
+  const [enteredAmount, setEnteredAmount] = useState("");
+  const [enteredDate, setEnteredDate] = useState("");
 
-  const [userInpunt, setUserInput] = useState({
-    enteredTitle: "",
-    enteredAmount: "",
-    EnteredDate: "",
-  });
+  //OR you can merge them into single state
+  // const [userInpunt, setUserInput] = useState({
+  //   enteredTitle: "",
+  //   enteredAmount: "",
+  //   EnteredDate: "",
+  // });
 
   const titleChangeHandler = (event) => {
-    //setEnteredTitle(event.target.value); OR
-    setUserInput({
-      ...userInpunt,
-      enteredTitle: event.target.value,
-    });
+    setEnteredTitle(event.target.value);
+
+    //OR you can use this where the current state is dependant on the previous state
+    // setUserInput((previousState) => {
+    //   return { ...previousState, enteredTitle: event.target.value };
+    // });
   };
 
   const amountChangeHandler = (event) => {
-    //setEnteredAmount(event.target.value); OR
-    setUserInput({
-      ...userInpunt,
-      enteredAmount: event.target.value,
-    });
+    setEnteredAmount(event.target.value);
+
+    //OR you can use this where the current state is dependant on the previous state
+    // setUserInput((previousState) => {
+    //   return { ...previousState, setEnteredAmount: event.target.value };
+    // });
   };
 
   const dateChangeHandler = (event) => {
-    //setEnteredDate(event.target.value); OR
-    setUserInput({
-      ...userInpunt,
-      enteredDate: event.target.value,
-    });
+    setEnteredDate(event.target.value);
+
+    //OR you can use this where the current state is dependant on the previous state
+    // setUserInput((previousState) => {
+    //   return { ...previousState, setEnteredDate: event.target.value };
+    // });
   };
 
   return (
